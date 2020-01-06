@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>{{ the_title }}</h2>
+<form method="GET" action="/">
+    <p><input name="the_region_selected" value='首页' type='SUBMIT'></p>
+</form>
+
+{{ the_plot_all_4|safe }}
+<p>图一为世界抑郁症患病率前十的国家近十年的患病率趋势。</p>
+
+<p>图二为世界抑郁症患病率前十的国家近十年的失业率趋势。</p>
+
+<p>以这十个国家为例，可以看得出抑郁症患病率变化不大，而失业率的变化也不大，所以暂时也难以判断两者是否存在相关性。</p>
+
+{% endblock %}

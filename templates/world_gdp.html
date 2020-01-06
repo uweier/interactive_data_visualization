@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>{{ the_title }}</h2>
+<form method="GET" action="/">
+    <p><input name="the_region_selected" value='首页' type='SUBMIT'></p>
+</form>
+
+{{ the_plot_all_8|safe }}
+
+<p>北美国家，如美国、加拿大、格陵兰，澳大利亚，还有部分欧洲国家的人均GDP较高。</p>
+
+<p>美国、加拿大、格陵兰、澳大利亚恰好也是抑郁症患病率较高的国家。</p>
+
+<p>将【世界抑郁症患病率】地图与【世界人均GDP】地图对比，两者的情况较为相似，抑郁症患病率较高的国家，人均GDP也较高。</p>
+
+<p>所以，抑郁症患病率在很大程度上与国家经济发展情况有一定的关系。</p>
+{% endblock %}

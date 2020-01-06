@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2 align="center">{{ the_title }}</h2>
+<p>当今世界，抑郁症已成为一种常见的心理疾病，其严重程度各不同，从轻度到中度到重度。而抑郁症患病原因主要归结于个人属性、社会与经济状况、环境因素。现代社会复杂、发展快、竞争大，人们或多或少会因为家庭、事业、人际交往等方面的原因产生焦虑、抑郁的情绪，当这些情绪积聚到一定程度而无法自我排解时，人们就很容易患上抑郁症。</p>
+
+<p>本次分析数据来源：数据银行、数据世界</p>
+
+<p>网站将由世界抑郁症整体情况出发，查看世界抑郁症各个地区的总人数、患病率、男性与女性患病人数，得出第一步分析。</p>
+
+<p>然后通过将抑郁症整体情况与失业率、人均GDP、妇女生育孩子数等数据进行对比分析，得出最终结论。</p>
+
+<p>点击以下按钮，可查看数据图表：</p>
+
+<h3>世界抑郁症整体情况：</h3>
+<form method="POST" action="/world_number">
+    <input name="the_region_selected_1" value='总人数' type='SUBMIT'>
+</form>
+
+<form method="POST" action="/world_hbl">
+    <input name="the_region_selected_2" value='患病率' type='SUBMIT'>
+</form>
+
+<form method="POST" action="/world_man_woman">
+    <input name="the_region_selected_3" value='男性与女性患者人数' type='SUBMIT'></p>
+</form>
+
+<h3>世界抑郁症相关因素设想及实际情况：</h3>
+<div style="width:100%;text-align:center">
+<form method="POST" action="/world_unemployment">
+    <p><input name="the_region_selected_4" value='患病率与失业率对比' type='SUBMIT'></p>
+</form>
+
+<form method="POST" action="/world_education">
+    <p><input name="the_region_selected_5" value='患者的学历/就业情况' type='SUBMIT'></p>
+</form>
+
+<form method="POST" action="/world_give_birth">
+    <p><input name="the_region_selected_7" value='每个妇女生育孩子数' type='SUBMIT'></p>
+</form>
+
+<form method="POST" action="/world_gdp">
+    <p><input name="the_region_selected_8" value='世界人均GDP情况' type='SUBMIT'></p>
+</form>
+
+<form method="POST" action="/summary">
+    <p><input name="the_region_selected_9" value='主题观点总结' type='SUBMIT'></p>
+</form>
+</div>
+<h3>世界抑郁症情况数据：</h3>
+{{ the_res|safe }}
+
+
+{% endblock %}

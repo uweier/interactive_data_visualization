@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>{{ the_title }}</h2>
+<form method="GET" action="/">
+    <p><input name="the_region_selected" value='首页' type='SUBMIT'></p>
+</form>
+
+{{ the_plot_all_2|safe }}
+
+<p>由【世界抑郁症患病率】图中可以得知，抑郁症患病率在近十年内变化不大，部分国家抑郁症患病率在逐年下降，抑郁症患病人数较少的格陵兰却是患病率较高的国家之一，而中国、俄罗斯、巴西等国家的情况与之相反。</p>
+
+<form method='POST' action='/search'>
+    <table>
+    <p>通过以下搜索框，搜索国家数据：</p>
+
+    <tr><td>地区：</td><td><input name='place' type='TEXT' ></td></tr>
+    </table>
+    <p>请输入地区名字进行搜索</p>
+    <p><input value='确定' type='SUBMIT'></p>
+    <table>
+	    <tr>
+		    {% for row_title in the_row_titles %}
+		    	<th>{{ row_title }}</th>
+		    {% endfor %}
+	    </tr>
+	    {% for log_row in the_data %}
+		    <tr>
+			    {% for item in log_row %}
+			    	<td>{{ item }}</td>
+			    {% endfor %}
+		    </tr>
+	    {% endfor %}
+    </table>
+</form>
+
+
+{% endblock %}

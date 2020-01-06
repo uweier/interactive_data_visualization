@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>{{ the_title }}</h2>
+<form method="GET" action="/">
+    <p><input name="the_region_selected" value='首页' type='SUBMIT'></p>
+</form>
+
+{{ the_plot_all_7|safe }}
+<p>此地图为世界每位妇女所生育的孩子的数量情况。</p>
+
+<p>由图中可以得知，世界整体上，每位妇女所生育的孩子数量在近十年向着减少的趋势发展。相比于其他地区，非洲每位妇女所生育的孩子数量较多。</p>
+
+<p>也就是说，随着时代的发展，大多数妇女还是选择少生或不生育。以往，劳动力是一个国家的重要力量，而现在却是科技。</p>
+
+<p>Uganda的抑郁症患病率较高，其妇女的生育数量也较多；Chad、Ethiopia、Angola、Nigeria等非洲国家的抑郁症患病率也较高，同时其妇女的生育数量也较多。因此，女性抑郁症患病率与妇女生育数量存在一定的关系。</p>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>{{ the_title }}</h2>
+<form method="GET" action="/">
+    <p><input name="the_region_selected" value='首页' type='SUBMIT'></p>
+</form>
+
+{{ the_plot_all_3|safe }}
+
+<p>由【世界男性、女性患病人数对比】图中可以得知，世界女性抑郁症患者多于男性。</p>
+
+<p>女性在产前、产后容易患抑郁症，加上现代女性承担越来越多的事情，由此，总体上，女性患病人数比男性多。</p>
+{% endblock %}

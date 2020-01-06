@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>{{ the_title }}</h2>
+<form method="GET" action="/">
+    <p><input name="the_region_selected" value='首页' type='SUBMIT'></p>
+</form>
+
+{{ the_plot_all_1|safe }}
+
+<p>由【世界抑郁症总人数】图中可以得知，抑郁症患病人数在近十年内变化不大，部分国家的抑郁症患病人数在逐年上升。而抑郁症患者人数较多的国家多分布在北美洲、亚洲、大洋洲和南美洲。</p>
+
+<form method='POST' action='/search_0'>
+    <table>
+    <p>通过以下搜索框，搜索国家数据：</p>
+
+    <tr><td>地区：</td><td><input name='place_0' type='TEXT' ></td></tr>
+    </table>
+    <p>请输入地区名字进行搜索</p>
+    <p><input value='确定' type='SUBMIT'></p>
+    <table>
+	    <tr>
+		    {% for row_title in the_row_titles %}
+			    <th>{{ row_title }}</th>
+		    {% endfor %}
+	    </tr>
+	    {% for log_row in the_data %}
+		    <tr>
+		    	{% for item_0 in log_row %}
+			    	<td>{{ item_0 }}</td>
+		    	{% endfor %}
+		    </tr>
+	    {% endfor %}
+    </table>
+</form>
+
+{% endblock %}
