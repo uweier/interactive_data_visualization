@@ -6,6 +6,7 @@
 <div align="center">
     <h1>:bulb: 世界抑郁症患病情况及其相关因素的分析 :bulb:</h1>
     <a href='http://huangyuhui.pythonanywhere.com/'>点击查看pythonanywhere链接</a>
+    <a href='https://nfunm034.gitee.io/jhs'>点击查看交互式代码</a>
 </div>
 
 ### :envelope:项目背景
