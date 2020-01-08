@@ -6,8 +6,9 @@
 <div align="center">
     <h1>:bulb: 世界抑郁症患病情况及其相关因素的分析 :bulb:</h1>
     <a href='http://huangyuhui.pythonanywhere.com/'>点击查看pythonanywhere链接</a>
-    <a href='https://nfunm034.gitee.io/jhs'>点击查看交互式代码</a>
 </div>
+
+[点击查看交互式代码](https://nfunm034.gitee.io/jhs)
 
 ### :envelope:项目背景
 当今世界，抑郁症已成为一种常见的心理疾病，原因主要归结于个人属性、社会与经济状况、环境因素。现代社会复杂、发展快、竞争大，人们或多或少会因为家庭、事业、人际交往等方面的原因产生焦虑、抑郁的情绪，当这些情绪积聚到一定程度而无法自我排解时，人们就很容易患上抑郁症。
